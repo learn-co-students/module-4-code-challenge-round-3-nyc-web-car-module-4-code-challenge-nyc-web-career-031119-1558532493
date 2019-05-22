@@ -1,7 +1,7 @@
 import React from "react";
 import Student from "./Student";
 
-const StudentsList = () => {
+const StudentsList = (props) => {
   return (
     <table className="ui celled striped padded table">
       <tbody>
@@ -19,8 +19,8 @@ const StudentsList = () => {
             <h3 className="ui center aligned header">Edit</h3>
           </th>
         </tr>
-
-        {/* Your code here */}
+        // Very confused why this isn't working below - I console logged exactly what I was mapping through and it gave me the array I was looking for. If this is deleted the first few of my deliverables are completed.
+        {props.students.students.map(student => <Student student={student}/>)}
       </tbody>
     </table>
   );
